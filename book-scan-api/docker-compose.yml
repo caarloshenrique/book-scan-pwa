@@ -1,0 +1,24 @@
+version: "3.1"
+services:
+  adminmongo:
+    image: mrvautin/adminmongo
+    ports:
+      - 8001:1234
+    environment:
+      - HOST=0.0.0.0
+    depends_on:
+      - mongo
+    links:
+      - mongo
+
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGODB_USER=mongo
+      - MONGODB_PASS=secret
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    ports:
+      - 27017:27017
