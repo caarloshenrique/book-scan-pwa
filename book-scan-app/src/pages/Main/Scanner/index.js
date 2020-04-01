@@ -68,7 +68,7 @@ function Scanner({ onScan }) {
       <Container>
         <ScanMarker>
           <img
-            src="https://png.pngtree.com/svg/20170822/ce8379fa9c.png"
+            src="https://raw.githubusercontent.com/caarloshenrique/book-scan-pwa/master/book-scan-app/public/scan_marker.png"
             alt="Marca para leitura do código"
             width="260"
             height="260"
@@ -77,8 +77,8 @@ function Scanner({ onScan }) {
         </ScanMarker>
         <img
           className="logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/VisualEditor_-_Icon_-_Book.svg/1200px-VisualEditor_-_Icon_-_Book.svg.png"
-          alt="Dev Samurai"
+          src="https://raw.githubusercontent.com/caarloshenrique/book-scan-pwa/master/book-scan-app/public/book.png"
+          alt="Book Icon"
           width="69"
           height="69"
         />
