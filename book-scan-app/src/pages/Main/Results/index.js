@@ -13,8 +13,22 @@ function Results({ isbn }) {
 
   useEffect(() => {
     const loadBook = async () => {
-      const response = await getBook(isbn);
-      setBook(response);
+      try {
+        const response = await getBook(isbn);
+        setBook(response);
+      } catch (e) {
+        if (e.response && e.response.status === 404) {
+          console.info('ISBN não encontrado na base de dados.', e);
+          alert(
+            'Desculpe, este livro não foi encontrado na nossa base de dados.'
+          );
+        } else {
+          console.error('Erro ao recuperar os dados do servidor.', e);
+          alert(
+            'Erro ao recuperar os dados do servidor, por favor, esteja conectado a Internet.'
+          );
+        }
+      }
     };
     loadBook();
   }, [isbn]);
