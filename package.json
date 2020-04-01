@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "quagga": "^0.12.1",
+    "react-icons": "^3.9.0",
+    "react-star-ratings": "^2.3.0"
+  }
+}
