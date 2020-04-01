@@ -5,7 +5,12 @@ import Results from './Results';
 
 function Main() {
   const [isbn, setIsbn] = useState();
-  return <Results isbn={isbn} />;
+  return (
+    <>
+      <Scanner onScan={setIsbn} />
+      {isbn && <Results isbn={isbn} />}
+    </>
+  );
 }
 
 export default Main;

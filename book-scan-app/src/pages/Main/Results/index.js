@@ -21,31 +21,36 @@ function Results({ isbn }) {
 
   return (
     <Container>
-      <Link to={`/book-details/${isbn}`}>
-        <Wrapper>
-          <Cover src={book.coverImage} />
-          <Info>
-            <h4 className="name">Código Limpo</h4>
-            <div className="book-rating">
-              <StarRatings
-                rating={4.9}
-                starRatedColor="#f1c40f"
-                starDimension="18"
-                starSpacing="0"
-              />{' '}
-              (4.9)
-            </div>
-            <div className="price">
-              <span className="discount">R$99,90</span> por <span>R$39,90</span>
-            </div>
-          </Info>
-          <ActionButtons>
-            <span className="button">
-              <MdArrowForward size={32} color="#fff" />
-            </span>
-          </ActionButtons>
-        </Wrapper>
-      </Link>
+      {book && (
+        <Link to={`/book-details/${isbn}`}>
+          <Wrapper>
+            <Cover src={book.coverUrl} />
+            <Info>
+              <h4 className="name">{book.name}</h4>
+              <div className="book-rating">
+                <StarRatings
+                  rating={book.rating}
+                  starRatedColor="#f1c40f"
+                  starDimension="18"
+                  starSpacing="0"
+                />{' '}
+                ({book.rating})
+              </div>
+              <div className="price">
+                <span className="discount">
+                  R$ {Number(book.price).toFixed(2)}
+                </span>{' '}
+                por <span>R$ {Number(book.promotionalPrice).toFixed(2)}</span>
+              </div>
+            </Info>
+            <ActionButtons>
+              <span className="button">
+                <MdArrowForward size={32} color="#fff" />
+              </span>
+            </ActionButtons>
+          </Wrapper>
+        </Link>
+      )}
     </Container>
   );
 }

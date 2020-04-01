@@ -1,0 +1,23 @@
+{
+  "books": [
+    {
+      "id": "9788576082675",
+      "isbn": "9788576082675",
+      "name": "Código Limpo - Habilidades Práticas do Agile Software",
+      "coverUrl": "https://lojasaraiva.vteximg.com.br/arquivos/ids/12116254/1008158185.jpg?v=637142274663600000",
+      "rating": 4.9,
+      "promotionalPrice": 39.9,
+      "price": 99.9,
+      "score": 4.8,
+      "scores": [
+        { "name": "Tradução", "value": 3.5 },
+        { "name": "Códigos", "value": 4 },
+        { "name": "Comunidade", "value": 5 },
+        { "name": "Exemplos", "value": 4.9 }
+      ],
+      "tecnologies": ["Java", "TDD", "Arquitetua"],
+      "requirements": ["Java"],
+      "description": "Mesmo um código ruim pode funcionar"
+    }
+  ]
+}
