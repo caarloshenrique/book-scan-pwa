@@ -68,7 +68,7 @@ function Scanner({ onScan }) {
       <Container>
         <ScanMarker>
           <img
-            src="https://cdn.onlinewebfonts.com/svg/img_160844.png"
+            src="https://png.pngtree.com/svg/20170822/ce8379fa9c.png"
             alt="Marca para leitura do código"
             width="260"
             height="260"
@@ -77,7 +77,7 @@ function Scanner({ onScan }) {
         </ScanMarker>
         <img
           className="logo"
-          src="https://image.flaticon.com/icons/png/512/87/87390.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/VisualEditor_-_Icon_-_Book.svg/1200px-VisualEditor_-_Icon_-_Book.svg.png"
           alt="Dev Samurai"
           width="69"
           height="69"

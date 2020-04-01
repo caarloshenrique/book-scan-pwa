@@ -1,11 +1,11 @@
-import User from "../models/User";
+import Book from "../models/Book";
 
-class UsersController {
+class BooksController {
   async index(req, res) {
     try {
-      const users = await User.find();
+      const books = await Book.find();
 
-      return res.json(users);
+      return res.json(books);
     } catch (err) {
       console.error(err);
       return res.status(500).json({ error: "Internal Server Error" });
@@ -14,14 +14,14 @@ class UsersController {
 
   async show(req, res) {
     try {
-      const { email } = req.params;
-      const user = await User.findOne({ email });
+      const { isbn } = req.params;
+      const book = await Book.findOne({ isbn });
 
-      if (!user) {
+      if (!book) {
         return res.status(404).json();
       }
 
-      return res.json(user);
+      return res.json(book);
     } catch (err) {
       console.error(err);
       return res.status(500).json({ error: "Internal Server Error" });
@@ -30,9 +30,9 @@ class UsersController {
 
   async create(req, res) {
     try {
-      const user = await User.create(req.body);
+      const book = await Book.create(req.body);
 
-      return res.status(201).json(user);
+      return res.status(201).json(book);
     } catch (err) {
       console.error(err);
       return res.status(500).json({ error: "Internal Server Error" });
@@ -41,14 +41,14 @@ class UsersController {
 
   async update(req, res) {
     try {
-      const { email } = req.params;
-      const user = await User.findOne({ email });
+      const { isbn } = req.params;
+      const book = await Book.findOne({ isbn });
 
-      if (!user) {
+      if (!book) {
         return res.status(404).json();
       }
 
-      await user.updateOne(req.body);
+      await book.updateOne(req.body);
 
       return res.status(200).json();
     } catch (err) {
@@ -59,14 +59,14 @@ class UsersController {
 
   async destroy(req, res) {
     try {
-      const { email } = req.params;
-      const user = await User.findOne({ email });
+      const { isbn } = req.params;
+      const book = await Book.findOne({ isbn });
 
-      if (!user) {
+      if (!book) {
         return res.status(404).json();
       }
 
-      await user.deleteOne();
+      await book.deleteOne();
 
       return res.status(200).json();
     } catch (err) {
@@ -76,4 +76,4 @@ class UsersController {
   }
 }
 
-export default new UsersController();
+export default new BooksController();
