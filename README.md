@@ -10,7 +10,7 @@ O projeto foi feito com as seguintes tecnologias:
 - [ExpressJS](https://expressjs.com/pt-br/)
 - [ReactJS](https://reactjs.org/)
 - [Axios](https://github.com/axios/axios)
-- [Styled-Components](https://styled-components.com/)
+- [QuaggaJS](https://github.com/serratus/quaggaJS)
 {...}
 
 ## Licença 📄
