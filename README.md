@@ -13,6 +13,19 @@ O projeto foi feito com as seguintes tecnologias:
 - [QuaggaJS](https://github.com/serratus/quaggaJS)
 {...}
 
+## :fire: Executando a aplicação
+
+### :bug: Back-end
+#### Configuração
+```
+$ cd book-scan-api
+$ yarn
+```
+#### Execução
+```
+$ yarn dev
+```
+
 ## :page_facing_up: Licença 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
 
