@@ -26,6 +26,18 @@ $ yarn
 $ yarn dev
 ```
 
+### :cyclone: Front-end
+#### Configuração
+
+```
+$ cd book-scan-app
+$ yarn
+```
+#### Execução
+```
+$ yarn start
+```
+
 ## :page_facing_up: Licença 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
 
