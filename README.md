@@ -13,6 +13,10 @@ O projeto foi feito com as seguintes tecnologias:
 - [QuaggaJS](https://github.com/serratus/quaggaJS)
 {...}
 
+## :clipboard: Pré-requisitos
+
+- [NodeJS LTS (ou superior)](https://nodejs.org/en/)
+
 ## :fire: Executando a aplicação
 
 ### :bug: Back-end
